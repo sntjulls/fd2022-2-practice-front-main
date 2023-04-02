@@ -10,6 +10,7 @@ const namesBtn = [
 
 const CollectionNames = () => {
   const [idBtn, setIdBtn] = useState(1);
+  
   const renderBtn = ({ id, name }) => {
     const classNames = cx(styles.btn, {
       [styles.active]: id === idBtn,
