@@ -11,12 +11,13 @@ import StartContestPage from './pages/StartContestPage/StartContestPage';
 import Dashboard from './pages/Dashboard/Dashboard';
 import ContestPage from './pages/ContestPage/ContestPage';
 import UserProfile from './pages/UserProfile/UserProfile';
-import ContestCreationPage from './pages/ContestCreation/ContestCreationPage';
+import ContestCreationPage from './pages/ContestCreation';
 import NotFound from './components/NotFound/NotFound';
 import {WithAuth, WithNotAuth} from './components/HOCs';
 import ChatContainer from './components/Chat/ChatComponents/ChatContainer/ChatContainer';
 import CONSTANTS from './constants';
 import browserHistory from './browserHistory';
+import PricingPage from './pages/PricingPage';
 
 class App extends Component {
   render() {
@@ -35,6 +36,8 @@ class App extends Component {
         />
         <Switch>
           <Route exact path="/" component={Home} />
+          <Route exact path="/pricing" component={PricingPage} />
+
           <Route
             exact
             path="/login"
